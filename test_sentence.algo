@@ -1,0 +1,28 @@
+ALGORITHM read_sentence
+VAR
+  nbr_ch : INTEGER := 0;
+  ch : CHAR # ".";
+  nbr_word :INTEGER := 0;
+  nbr_vow : INTEGER := 0;
+BEGIN
+ REPEAT
+  Read(ch);
+ 
+  IF (ch # " ") THEN
+      nbr_ch := nbr_ch + 1;
+  ELSE
+    nbr_word := nbr_word + 1;
+  END_IF
+  
+  IF (ch := "a" OR ch := "e" OR ch := "i" OR ch := "o" OR ch := "u" OR ch := "y" ) THEN
+  nbr_vow := nbr_vow + 1;
+  
+  END_IF
+  Read(nbr_ch);
+  Read(nbr_word);
+  Read(nbr_vow);
+
+ UNTIL (ch :=".")
+  
+END
+
